@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after,
+.hamburger:focus {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s;
+  position: relative;
+  outline: none;
+  border: none;
+
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  padding: 1px;
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(70deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+#menu,
+#menu::after {
+  transition: 1.5s all linear;
+  z-index: 9;
+}
+
+#menu::before {
+  transition: none;
+}
+
+.canvas {
+  position: fixed;
+  top: 0;
+}
+
+
+#wrapper-canvas {
+  width: 100px;
+  height: 100%;
+  display: block;
+  background-color: #fff;
+
+}
